@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MyBookList</h1>
+    
+    <div class="form-group">
+        <form id="book-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="text" id="isbn" placeholder="ISBN Number" required>
+            <button type="submit" id="submit">Add Book</button>
+        </form>
+    </div>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN#</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="book-list">
+            <!-- Books will be added here dynamically -->
+        </tbody>
+    </table>
+
+
+    <script src="/script.js" ></script>
+</body>
+</html>
