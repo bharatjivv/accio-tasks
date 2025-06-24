@@ -1,25 +1,23 @@
-//your JS code here. If required.
-let currentAudio = null;
-        
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function() {
-        // Stop any currently playing audio
-        if (currentAudio) {
-            currentAudio.pause();
-            currentAudio.currentTime = 0;
-        }
+const audios = [
+  document.getElementById("audio0"),
+  document.getElementById("audio1"),
+  document.getElementById("audio2"),
+];
 
-        // Play the selected sound
-        const soundFile = this.getAttribute('data-sound');
-        currentAudio = new Audio(`sounds/${soundFile}`);
-        currentAudio.play();
+function playSound(index) {
+  stopSounds();
+  const audio = audios[index];
+  if (audio) {
+    audio.play().catch(error => {
+      console.error("Playback failed:", error);
+      alert("Audio playback failed.");
     });
-});
+  }
+}
 
-document.querySelector('.stop').addEventListener('click', function() {
-    if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-        currentAudio = null;
-    }
-});
+function stopSounds() {
+  audios.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+}
