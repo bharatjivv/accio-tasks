@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizApp</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Oswald:wght@200..700&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body class="container">
+
+    <section class="main">
+
+        <div class="main-content">
+            
+            <div class="random-btn">
+                <button class="random-btn-btn">START RANDOM QUIZ <span>&#10148;</span></button>
+            </div>
+            <div class="carousal">
+                <p class="carousal-para">
+                    WELCOME TO MY-QUIZ-APP
+                </p>
+
+
+<div style="position: relative; display: flex; align-items: center; gap: 10px;">
+
+    <button class="scroll-btn" onclick="scrollCarousel('left')">&#10094;</button>
+
+
+<div class="main-carousal" class="main-carousal" id="carousel" style="scroll-behavior: smooth;">
+                    <div class="card">
+                        <img src="img/history.jpg" alt="gk">
+                        <button class="card-btn" data-section="0">INDIAN HISTORY</button>
+                    </div>
+                    <div class="card">
+                        <img src="img/gk.jpg" alt="gk">
+                        <button class="card-btn" data-section="1">GENERAL KNOWLEDGE</button>
+                    </div>
+                    <div class="card">
+                        <img src="img/science (1).jpg" alt="gk">
+                        <button class="card-btn" data-section="2">SCIENCE</button>
+                    </div>
+                    <div class="card">
+                        <img src="img/maths.jpg" alt="gk">
+                        <button class="card-btn" data-section="3">MATHEMATIC</button>
+                    </div>
+                    <div class="card">
+                        <img src="img/geography 2.jpg" alt="gk">
+                        <button class="card-btn"data-section="4">INDIAN GEOGRAPHY</button>
+                    </div>
+                    <div class="card">
+                        <img src="img/literature.jpeg" alt="gk">
+                        <button class="card-btn" data-section="5">INDIAN LITERATURE</button>
+                    </div>
+                    <div class="card">
+                        <img src="img/world history.jpeg" alt="gk">
+                        <button class="card-btn" data-section="6">WORLD HISTORY</button>
+                    </div>
+                    <div class="card">
+                        <img src="img/techonology.jpg" alt="gk">
+                        <button class="card-btn" data-section="7">TECHNOLOGY</button>
+                    </div>
+                </div>
+
+
+    <button class="scroll-btn" onclick="scrollCarousel('right')">&#10095;</button>
+</div>
+
+
+            
+            </div>
+        </div>
+    </section>
+
+
+    <!--Sections Which Contain Quiz Questions answer-->
+    <div class="question-container">
+    </div>
+
+
+
+    <!--JS is linked here-->
+    <script src="script.js"></script>
+</body>
+</html>
