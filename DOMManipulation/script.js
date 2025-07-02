@@ -1,7 +1,3 @@
-console.log('hi')
-
-// displayCount (span element) - will display count
-
 let count = document.getElementById('displayCount');
 let dcrBtn = document.getElementById('decrement');
 let incBtn = document.getElementById('increment');
@@ -10,15 +6,12 @@ let errorMsg = document.getElementById('errorMsg');
 let counter = 1;
 dcrBtn.disabled = false;
 
-
-
 function displayingCount() {
     if(counter === 0) {
         clrBtn.style.display = 'none';
     }
     count.textContent = counter;
 }
-
 displayingCount();
 
 dcrBtn.addEventListener('click', () => {
@@ -33,18 +26,16 @@ dcrBtn.addEventListener('click', () => {
     }
 })
 
-
 incBtn.addEventListener('click', () => {
     if(counter === 0) {
         errorMsg.innerText = ``;
         dcrBtn.disabled = false;
         clrBtn.style.display = 'none';
     }  
-    
+
     clrBtn.style.display = 'inline';
     counter++;
     displayingCount();
-    
 })
 
 clrBtn.addEventListener('click', () => {
