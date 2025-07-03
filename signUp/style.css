@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: black;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px;
+    background-color: black;
+}
+
+.signup-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #666;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-bottom-color: #ffffff;
+}
+
+.form-input.valid {
+    border-bottom-color: #4ade80;
+}
+
+.form-input.invalid {
+    border-bottom-color: #ef4444;
+}
+
+.form-input::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.error-message.show {
+    opacity: 1;
+}
+
+.success-message {
+    color: #4ade80;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.success-message.show {
+    opacity: 1;
+}
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.radio-input {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-input input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-input input:checked + .radio-dot {
+    opacity: 1;
+}
+
+.radio-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.radio-label {
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.checkbox-input {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #666;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.checkbox-input input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-input input:checked + .checkbox-check {
+    opacity: 1;
+}
+
+.checkbox-check {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 6px;
+    height: 10px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.checkbox-label {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.signup-button {
+    width: 200px;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-button:hover:not(:disabled) {
+    background-color: #f0f0f0;
+    transform: translateY(-1px);
+}
+
+.signup-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-feedback.success {
+    background-color: rgba(74, 222, 128, 0.1);
+    border: 1px solid #4ade80;
+    color: #4ade80;
+}
+
+.form-feedback.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid #ef4444;
+    color: #ef4444;
+}
+
+.form-feedback.show {
+    opacity: 1;
+}
+
+.password-requirements {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.password-requirements ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.password-requirements li {
+    padding: 2px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.password-requirements li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #ef4444;
+    transition: color 0.3s ease;
+}
+
+.password-requirements li.valid::before {
+    content: "✓";
+    color: #4ade80;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 20px;
+    }
+
+    .signup-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .signup-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-title {
+        font-size: 1.8rem;
+    }
+
+    .form-input {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Focus styles for accessibility */
+.form-input:focus,
+.radio-input input:focus + .radio-dot,
+.checkbox-input input:focus + .checkbox-check,
+.signup-button:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .form-input {
+        border-bottom-width: 2px;
+    }
+    
+    .radio-input,
+    .checkbox-input {
+        border-width: 3px;
+    }
+}

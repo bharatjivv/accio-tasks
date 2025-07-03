@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="signup-container">
+        <h1 class="signup-title">Signup</h1>
+        
+        <form id="signupForm" novalidate>
+            <div class="form-group">
+                <input 
+                    type="text" 
+                    id="fullName" 
+                    name="fullName" 
+                    class="form-input" 
+                    placeholder="Full Name"
+                    required
+                    aria-describedby="fullNameError"
+                    autocomplete="name"
+                >
+                <div id="fullNameError" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group">
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="Email"
+                    required
+                    aria-describedby="emailError emailSuccess"
+                    autocomplete="email"
+                >
+                <div id="emailError" class="error-message" role="alert" aria-live="polite"></div>
+                <div id="emailSuccess" class="success-message" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group">
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    class="form-input" 
+                    placeholder="Password"
+                    required
+                    aria-describedby="passwordError passwordRequirements"
+                    autocomplete="new-password"
+                >
+                <div id="passwordError" class="error-message" role="alert" aria-live="polite"></div>
+                <div id="passwordRequirements" class="password-requirements">
+                    <p>Password must contain:</p>
+                    <ul>
+                        <li id="req-length">At least 8 characters</li>
+                        <li id="req-uppercase">One uppercase letter</li>
+                        <li id="req-lowercase">One lowercase letter</li>
+                        <li id="req-number">One number</li>
+                        <li id="req-special">One special character</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input 
+                    type="password" 
+                    id="confirmPassword" 
+                    name="confirmPassword" 
+                    class="form-input" 
+                    placeholder="Confirm Password"
+                    required
+                    aria-describedby="confirmPasswordError"
+                    autocomplete="new-password"
+                >
+                <div id="confirmPasswordError" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group">
+                <input 
+                    type="date" 
+                    id="birthDate" 
+                    name="birthDate" 
+                    class="form-input" 
+                    placeholder="MM/DD/YYYY"
+                    required
+                    aria-describedby="birthDateError"
+                    maxlength="10"
+                >
+                <div id="birthDateError" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <fieldset class="radio-group">
+                <legend class="sr-only">Select your role</legend>
+                <div class="radio-option">
+                    <div class="radio-input">
+                        <input type="radio" id="student" name="role" value="student" required>
+                        <div class="radio-dot"></div>
+                    </div>
+                    <label for="student" class="radio-label">Student</label>
+                </div>
+                <div class="radio-option">
+                    <div class="radio-input">
+                        <input type="radio" id="employee" name="role" value="employee" required>
+                        <div class="radio-dot"></div>
+                    </div>
+                    <label for="employee" class="radio-label">Employee</label>
+                </div>
+            </fieldset>
+
+            <div class="checkbox-group">
+                <div class="checkbox-input">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <div class="checkbox-check"></div>
+                </div>
+                <label for="terms" class="checkbox-label">I agree to all the Terms and conditions</label>
+            </div>
+
+            <button type="submit" class="signup-button" id="submitButton">
+                Signup
+            </button>
+
+            <div id="formFeedback" class="form-feedback" role="alert" aria-live="polite"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

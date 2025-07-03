@@ -5,7 +5,7 @@ inputs[0].focus();
 
 inputs.forEach((input, index) => {
   input.addEventListener("input", (e) => {
-    const value = input.value.replace(/[^0-9]/g, ""); // Allow only numbers
+    const value = input.value.replace(/[^0-9]/g, "");
     input.value = value;
 
     if (value && index < inputs.length - 1) {
