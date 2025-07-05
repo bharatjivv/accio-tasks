@@ -1,0 +1,14 @@
+#loading {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#error {
+  color: red;
+  margin: 10px 0;
+}
+
+#output img {
+  margin: 10px;
+  border: 2px solid #ccc;
+}

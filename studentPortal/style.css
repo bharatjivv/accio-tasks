@@ -1,0 +1,91 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.heading {
+    background-color: black;
+    color: white;
+    height: 60px;
+}
+
+h1 {
+    padding: 10px;
+    padding-top: 15px;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.searchArea {
+    padding : 10px;
+    padding-top: 20px;
+}
+
+input {
+    width: 90%;
+    height: 40px;
+    border: 1px solid black;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+#searchBtn {
+    width: 9%;
+    height: 42px;
+}
+
+.btnArea {
+    padding : 2px 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.styleBtn {
+    width: 15%;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+table {
+    width: 98%;
+    margin: 12px;
+}
+
+thead {
+    font-weight: bold;
+    background-color: aliceblue;
+}
+
+table, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 4px;
+    text-align: center;
+}
+
+.profilePic {
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    padding: 4px;
+    border: 1px solid grey;
+    margin-right: 8px;
+    margin-left: 2px;
+}
+
+.tableFirstColumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border: 0px;
+}
+

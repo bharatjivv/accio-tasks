@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Student Portal</h1>
+    </div>
+    <div class="searchArea">
+        <input type="text" placeholder="Search" id="search"/>
+        <button id="searchBtn" class="styleBtn" onclick="handleSearch(studData)">Search</button>        
+    </div>
+    <div class="btnArea">
+        <button id="sortasc" class="styleBtn">Sort A->Z</button>
+        <button id="sortdesc" class="styleBtn">Sort Z->A</button>
+        <button class="styleBtn" onclick="sortByMarks(studData)">Sort By Marks</button>
+        <button class="styleBtn" onclick="sortByPass(studData)">Sort By Passing</button>
+        <button class="styleBtn" onclick="sortByClass(studData)">Sort By Class</button>
+        <button class="styleBtn" onclick="sortByGender(studData)">Sort By Gender</button>
+    </div>
+    <div class="tableArea">
+        <table>
+            <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Gender</td>
+                <td>Class</td>
+                <td>Marks</td>
+                <td>Passing</td>
+                <td>Email</td>
+            </tr>
+        </thead>
+        <tbody id="studentData">
+         
+        </tbody>
+        </table>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
